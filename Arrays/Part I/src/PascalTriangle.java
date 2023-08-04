@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 public class PascalTriangle {
     // Variation 1 - Given r and c, find the element at the rth row and cth column of the Pascal's Triangle
     static int findElement(int r, int c){
@@ -18,6 +17,7 @@ public class PascalTriangle {
 
     // Variation 2 - Given r, print the rth row of the Pascal's Triangle
     // Leetcode 119 - Pascal's Triangle II
+    // https://leetcode.com/problems/pascals-triangle-ii/
     static ArrayList<Integer> printRow(int r){
 
         ArrayList<Integer> row = new ArrayList<Integer>();
@@ -40,6 +40,7 @@ public class PascalTriangle {
 
     // Variaton 3 - Given number of rows, print the Pascal's Triangle
     // Leetcode 118 - Pascal's Triangle
+    // https://leetcode.com/problems/pascals-triangle/
     static ArrayList<ArrayList<Integer>> printPascalTriangle(int numberOfRows){
         // Declare an ArrayList of type ArrayList<Integer> which will store all the rows of the Pascal's Triangle
         ArrayList<ArrayList<Integer>> finalList = new ArrayList<ArrayList<Integer>>();
