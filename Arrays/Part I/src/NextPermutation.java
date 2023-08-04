@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 // Leetcode 31 - Next Permutation
+// https://leetcode.com/problems/next-permutation/
 public class NextPermutation {
     static void reverseArray(int[] arr, int start, int end){
         int i = start, j = end - 1;
