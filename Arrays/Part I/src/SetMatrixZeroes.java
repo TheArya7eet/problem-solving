@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 // Leetcode 73 - Set Matrix Zeroes
+// https://leetcode.com/problems/set-matrix-zeroes/
 public class SetMatrixZeroes {
     // Brute Force
     static void markCol(int[][] matrix, int n, int c){
