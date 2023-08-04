@@ -35,20 +35,24 @@ public class PascalTriangle {
         return row;
     }
 
-    // Variaton 3 - Given n, print the Pascal's Triangle
+    // Variaton 3 - Given number of rows, print the Pascal's Triangle
     // Leetcode 118 - Pascal's Triangle
     static ArrayList<ArrayList<Integer>> printPascalTriangle(int numberOfRows){
+        // Declare an ArrayList of type ArrayList<Integer> which will store all the rows of the Pascal's Triangle
         ArrayList<ArrayList<Integer>> finalList = new ArrayList<ArrayList<Integer>>();
 
         for(int i = 1; i <= numberOfRows; i++){
+            // Declare an ArrayList of type Integer which will store one row at a time
             ArrayList<Integer> tempList = new ArrayList<Integer>();
             long ans = 1;
             tempList.add((int)ans);
             for(int j = 1; j < i; j++){
                 ans = ans * (i - j);
                 ans = ans / j;
+                // Add the element of the row to the tempList
                 tempList.add((int)ans);
             }
+            // After each inner iteration, add the tempList to the finalList
             finalList.add(tempList);
         }
 
