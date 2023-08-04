@@ -5,8 +5,11 @@ public class PascalTriangle {
     static int findElement(int r, int c){
         int ans = 1;
 
+        // The loop will run from 0 to c
         for(int i = 0; i < c; i++){
+            // In each iteration multiply (r - i) with ans
             ans  = ans * (r - i);
+            // Then divide ans by (i + 1)
             ans = ans / (i + 1);
         }
 
