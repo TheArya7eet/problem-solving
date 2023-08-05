@@ -3,7 +3,7 @@ import java.util.Arrays;
 // Leetcode 73 - Set Matrix Zeroes
 // https://leetcode.com/problems/set-matrix-zeroes/
 public class SetMatrixZeroes {
-    // Brute Force
+    // Brute Force Approach
     static void markCol(int[][] matrix, int n, int c){
         for(int r = 0; r < n; r++){
             if(matrix[r][c] != 0) {
