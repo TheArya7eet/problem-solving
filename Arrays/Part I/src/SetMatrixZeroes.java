@@ -22,6 +22,7 @@ public class SetMatrixZeroes {
         // Traverse the matrix
         for(int r = 0; r < n; r++){
             for(int c = 0; c < m; c++){
+                // If [r][c]th element of the matrix is 0
                 if(matrix[r][c] == 0){
                     // Set the value of the non-zero elements of the rth row of the matrix to -1
                     markRow(matrix,  m, r);
