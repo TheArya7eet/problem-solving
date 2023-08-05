@@ -82,7 +82,7 @@ public class SetMatrixZeroes {
         // Initialize a variable col0 with 1, which will serve the purpose of the col array
         int col0 = 1;
 
-        // Traverse the array
+        // Traverse the matrix
         for(int r = 0; r < n; r++){
             for(int c = 0; c < m; c++){
                 // If the [r][c]th element of the matrix is 0
