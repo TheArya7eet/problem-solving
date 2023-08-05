@@ -19,7 +19,7 @@ public class PascalTriangle {
     // Leetcode 119 - Pascal's Triangle II
     // https://leetcode.com/problems/pascals-triangle-ii/
     static ArrayList<Integer> printRow(int r){
-
+        // Declare an ArrayList which will store the rth row of the Pascal's Triangle
         ArrayList<Integer> row = new ArrayList<Integer>();
         long ans = 1;
         row.add((int)ans); // Add 1 to the row just after declaring it, because the first element in each row of the Pascal Triangle is always 1
@@ -30,9 +30,10 @@ public class PascalTriangle {
             return row;
         }
 
-        for(int i = 1; i <= r; i++){
-            ans = ans * (r - i + 1);
-            ans = ans / i;
+        // Run a loop i that will signify the columns ranging from (0 to r - 1) (because in each row, there are r columns)
+        for(int i = 0; i < r; i++){
+            ans = ans * (r - i);
+            ans = ans / (i + 1);
             row.add((int)ans);
         }
         return row;
@@ -64,6 +65,6 @@ public class PascalTriangle {
     }
 
     public static void main(String[] args) {
-        System.out.println(printPascalTriangle(6));
+        System.out.println(printRow(4));
     }
 }
