@@ -25,9 +25,9 @@ public class SetMatrixZeroes {
                 // If [r][c]th element of the matrix is 0
                 if(matrix[r][c] == 0){
                     // Set the value of the non-zero elements of the rth row of the matrix to -1
-                    markRow(matrix,  m, r);
+                    markRow(matrix,  n, r);
                     // Set the value of the non-zero elements of the cth col of the matrix to -1
-                    markCol(matrix, n, c);
+                    markCol(matrix, m, c);
                 }
             }
         }
