@@ -51,7 +51,9 @@ public class KadaneAlgorithm {
 
         for(int i = 0; i < arr.length; i++){
             sum += arr[i];
+            // If sum > maxSum, set value of sum in maxSum
             maxSum = Math.max(sum, maxSum);
+            // If sum < 0, we will set the value of sum again to 0 as we will not consider its negative value in our answer
             if(sum < 0){
                 sum = 0;
             }
