@@ -31,9 +31,9 @@ public class PascalTriangle {
         }
 
         // Run a loop i that will signify the columns ranging from (0 to r - 1) (because in each row, there are r columns)
-        for(int i = 0; i < r; i++){
-            ans = ans * (r - i);
-            ans = ans / (i + 1);
+        for(int i = 1; i <= r; i++){
+            ans = ans * (r - i + 1);
+            ans = ans / (i);
             row.add((int)ans);
         }
         return row;
@@ -46,14 +46,14 @@ public class PascalTriangle {
         // Declare an ArrayList of type ArrayList<Integer> which will store all the rows of the Pascal's Triangle
         ArrayList<ArrayList<Integer>> finalList = new ArrayList<ArrayList<Integer>>();
 
-        for(int i = 1; i <= numberOfRows; i++){
+        for(int i = 0; i < numberOfRows; i++){
             // Declare an ArrayList of type Integer which will store one row at a time
             ArrayList<Integer> tempList = new ArrayList<Integer>();
             long ans = 1;
             tempList.add((int)ans);
-            for(int j = 1; j < i; j++){
-                ans = ans * (i - j);
-                ans = ans / j;
+            for(int col = 1; col <= i; col++){
+                ans = ans * (i - col + 1);
+                ans = ans / (col);
                 // Add the element of the row to the tempList
                 tempList.add((int)ans);
             }
@@ -65,6 +65,6 @@ public class PascalTriangle {
     }
 
     public static void main(String[] args) {
-        System.out.println(printRow(4));
+        System.out.println(printPascalTriangle(5));
     }
 }
